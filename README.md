@@ -1,31 +1,56 @@
-# Covid-Vaccination-Analysis
-Tools Used: Pandas, Matplotlib, Scipy
+# COVID Vaccination Analysis
 
-The above mentioned tools are used to analyse a Covid vaccination data set and do statistical analysis based on state wise, no of people vaccinated and no of people who need to be vaccinated.
+## Project Overview
 
-# Getting the data:
-* We are using pandas read_excel method for reading the excel file.
-* Pandas will create a dataframe we will store that dataframe in data varirable.
-* We are using pandas head method for displaying top 5 row of that dataframe.
+This project focuses on analyzing COVID-19 vaccination data from various States and Union Territories (UTs) in India. The aim is to identify trends, gaps, and key insights about vaccination efforts, using various data analysis and visualization techniques. Insights regarding vaccination coverage, population correlation, and daily vaccination trends are derived to inform decision-making and better understand the progress of the vaccination drive.
 
-# Modifiying the Data For Our Use:
-* We are going to visualize the probability concepts like Normal Distribution, Three Sigma rule, z-index.
-* We are going to do those things in the percentage of people vaccinated data.
-* But in our dataset we don't have percentage of people vaccinated data, so we need to Calutate it from the existing dataset.
-* We can calculate the percentage of people vaccinated by dividing number of people taken the first dose by total population of the state.
-* Pandas made it very easy,we can just divide the two divide two dataframe to get that.
+## Key Features
 
-# Normal Distribution:
-* First we are getting mean and Standard deveation from the percentage data using pandas describe function.
-* Then We are using matplotlib plot function to plot of the curve.
-* We are giving sorted list of the percentage Data as X Axis.
-* Y-Axis is the is probability Density function from Scipy.
-* Then we are using `matplotlib' show function to show the results.
+- **Exploratory Data Analysis (EDA)**: Initial data checks to identify anomalies and summarize key statistics for dose administration across states.
+- **Three Sigma Rule**: Applied to detect any outliers in vaccination data.
+- **Data Visualization**: Multiple charts and graphs to visualize trends, including:
+  - Dose 1 vs Dose 2 coverage across states.
+  - Total vaccination doses by population.
+  - Vaccination doses administered on the day prior to data collection.
+  - Dose 1 and Dose 2 coverage across states, highlighting the gap between doses.
+- **Key Insights**: Highlighted based on analysis, providing an understanding of vaccination efforts.
 
-# Three Sigma Rule:
-* We can Calculate it using the scipy cumulative distribution function cdf.
-* We can print the % of our calculations fall in between one standard deviation Distance ,two and three respectively.
+## Key Insights
 
-# Z-index:
-* In the Python We don't need that Table scipy provide that in the form of cdf cumulative probability function.
-* We can just pass the value of Z and find the cumulative probablity.
+1. **Vaccination Dose 1 vs Dose 2 Coverage**:
+   - Positive correlation exists between the first and second doses administered, but there's a clear gap as fewer second doses are given across states.
+
+2. **Top 5 States/UTs by Total Vaccinations**:
+   - **Maharashtra**, **Uttar Pradesh**, **Gujarat**, **Rajasthan**, and **West Bengal** lead in total vaccination numbers, driven by population size and vaccination drives.
+
+3. **Population vs Vaccination Doses**:
+   - Larger states like **Uttar Pradesh** and **Maharashtra** administered the highest number of vaccines. Some medium-sized states show better vaccine penetration in proportion to their population.
+
+4. **Vaccination Doses Administered the Day Before**:
+   - Most states administered fewer than 1 million doses the day before the data was collected, with a right-skewed distribution. Only a few states exceeded 1 million doses.
+
+## Files
+
+- **`analysis.ipynb`**: The Jupyter notebook containing the code for data analysis, visualization, and statistical checks.
+- **`covid_vaccine_data_set.xlsx`**: The dataset used for analysis, including vaccination doses and population figures for each State/UT.
+- **`README.md`**: This file, providing an overview of the project.
+
+## Installation and Usage
+
+### Prerequisites
+
+To run this project, you need the following dependencies installed:
+
+- Python 3.x
+- Jupyter Notebook
+- Pandas
+- Matplotlib
+- Seaborn
+- NumPy
+
+### Steps to Run
+
+1. Clone the repository or download the necessary files.
+2. Install the required dependencies using `pip`:
+   ```bash
+   pip install pandas matplotlib seaborn numpy
