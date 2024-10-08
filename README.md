@@ -28,29 +28,3 @@ This project focuses on analyzing COVID-19 vaccination data from various States 
 
 4. **Vaccination Doses Administered the Day Before**:
    - Most states administered fewer than 1 million doses the day before the data was collected, with a right-skewed distribution. Only a few states exceeded 1 million doses.
-
-## Files
-
-- **`analysis.ipynb`**: The Jupyter notebook containing the code for data analysis, visualization, and statistical checks.
-- **`covid_vaccine_data_set.xlsx`**: The dataset used for analysis, including vaccination doses and population figures for each State/UT.
-- **`README.md`**: This file, providing an overview of the project.
-
-## Installation and Usage
-
-### Prerequisites
-
-To run this project, you need the following dependencies installed:
-
-- Python 3.x
-- Jupyter Notebook
-- Pandas
-- Matplotlib
-- Seaborn
-- NumPy
-
-### Steps to Run
-
-1. Clone the repository or download the necessary files.
-2. Install the required dependencies using `pip`:
-   ```bash
-   pip install pandas matplotlib seaborn numpy
